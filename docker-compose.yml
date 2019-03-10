@@ -2,13 +2,13 @@ version: "3"
 
 services:
   db:
-    container_name: ${COMPOSE_PROJECT_NAME}-db
+    container_name: ${COMPOSE_PROJECT_NAME}-5.7
     image: mysql:5.7
     restart: always
     ports:
       - 3306:3306
     volumes:  
-      - ./data/mysql:/var/lib/mysql
+      - ./data/5.7:/var/lib/mysql
     environment:
       - MYSQL_USER=${DATABASE_USER}
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
